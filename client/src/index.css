@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base-ivory: #F7F5F0;
+  --color-base-white: #FFFFFF;
+  --color-base-surface: #EAE5DC;
+  --color-base-surfaceLight: #F0ECE4;
+  --color-base-border: #E1DED6;
+  --color-base-borderLight: #ECE9E2;
+
+  --color-charcoal-900: #1A1C18;
+  --color-charcoal-800: #242722;
+  --color-charcoal-700: #3D413A;
+  --color-charcoal-600: #545850;
+  --color-charcoal-500: #77776E;
+  --color-charcoal-400: #9B9B93;
+  --color-charcoal-300: #C2C1BA;
+
+  --color-olive-50: #F4F6F2;
+  --color-olive-100: #E6EAE1;
+  --color-olive-200: #CCD5C3;
+  --color-olive-300: #ADBCA2;
+  --color-olive-400: #8C9F80;
+  --color-olive-500: #68745A;
+  --color-olive-600: #545E49;
+  --color-olive-700: #424B3A;
+  --color-olive-800: #32392C;
+  --color-olive-900: #22271E;
+
+  --color-wood-50: #FAF6F1;
+  --color-wood-100: #F2E8DC;
+  --color-wood-200: #E2CEB9;
+  --color-wood-300: #CFB092;
+  --color-wood-400: #B8906F;
+  --color-wood-500: #8C6D53;
+  --color-wood-600: #735741;
+  --color-wood-700: #5B4433;
+  --color-wood-800: #423226;
+
+  --font-serif: "Playfair Display", Georgia, Cambria, serif;
+  --font-sans: "Plus Jakarta Sans", Inter, system-ui, sans-serif;
+
+  --shadow-soft: 0 4px 20px -2px rgba(36, 39, 34, 0.05);
+  --shadow-elevated: 0 10px 30px -4px rgba(36, 39, 34, 0.08);
+  --shadow-drawer: 0 -4px 30px 0 rgba(36, 39, 34, 0.12);
+}
+
+@utility max-w-site {
+  max-width: 1440px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+body {
+  background-color: #F7F5F0;
+  color: #242722;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: 'Playfair Display', Georgia, Cambria, serif;
+}
+
+/* Custom Scrollbar for chat and tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F0ECE4;
+}
+::-webkit-scrollbar-thumb {
+  background: #C2C1BA;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #77776E;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
